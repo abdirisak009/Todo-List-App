@@ -7,34 +7,36 @@
 
     <script src="tailwindCss.js"></script>
 </head>
-<body class="bg-gray-800">
+<body class="flex justify-center bg-gray-800">
 
-    <div class="bg-gray-600 mx-5 mt-4 px-3 py-3 rounded-lg shadow-lg">
+    <div id="todoContainer" class="w-full sm:max-w-lg bg-gray-600 mx-5 mt-4 px-3 py-3 rounded-lg shadow-lg">
        <div class="flex justify-center items-center mx-auto">
         <h1 class="text-white text-2xl">To-List-App</h1>
        </div>
 
        <hr class="bg-white mt-5"></hr>
 
-       <div class="flex justify-between items-center mt-3">
-        <h1 class="text-white">Todo-1</h1>
-        <button class="bg-green-500 px-2 rounded-lg text-white">Do</button>
-       </div>
-
-       <div class="flex justify-between items-center mt-3">
-        <h1 class="text-white">Todo-1</h1>
-        <button class="bg-green-500 px-2 rounded-lg text-white">Do</button>
-       </div>
-
-       <div class="flex justify-between items-center mt-3">
-        <h1 class="text-white">Todo-1</h1>
-        <button class="bg-green-500 px-2 rounded-lg text-white">Do</button>
-       </div>
-
        <div class="flex justify-between mt-5 p-3">
-        <input type="text" class="w-96 " placeholder="Enger Task">
-        <button class="bg-yellow-500 py-3 px-2">Add Task</button>
+        <input id="input" type="text" class="outline-none rounded-l-lg sm:w-96 w-full px-2 " placeholder="Enter Task">
+        <button id="addTask" class="rounded-r-lg bg-yellow-500 py-3 w-24">Add Task</button>
        </div>
+
+       <!-- <div class="flex justify-between items-center mt-3 mx-2">
+        <h1 class="text-white">Todo-1</h1>
+        <button class="px-5 py-1 bg-green-500 px-2 rounded-lg text-white">Done</button>
+       </div> -->
+
+       <!-- <div class="flex justify-between items-center mt-3 mx-2">
+        <h1 class="text-white">Todo-1</h1>
+        <button class="px-5 py-1 bg-green-500 px-2 rounded-lg text-white">Done</button>
+       </div> -->
+
+       <!-- <div class="flex justify-between items-center mt-3 mx-2">
+        <h1 class="text-white">Todo-1</h1>
+        <button class="px-5 py-1 bg-green-500 px-2 rounded-lg text-white">Done</button>
+       </div> -->
+
+
     </div>
 
     <script src="main.js"></script>
