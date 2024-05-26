@@ -1,6 +1,6 @@
 const userInput = document.getElementById("input")
 const addTaskBtn = document.getElementById("addTask")
-const todoContainer = document.getElementById("todoContainer")
+const todoList = document.getElementById("todoList")
 
 let taskInput = "";
 
@@ -21,14 +21,27 @@ addTaskBtn.addEventListener("click", () => {
         doneBtn.classList.add('px-5', 'py-1', 'bg-green-500', 'px-2', 'rounded-lg', 'text-white');
         doneBtn.textContent = "Done"
     
-        todoContainer.appendChild(todoItem);
+        todoList.appendChild(todoItem);
         todoItem.appendChild(heading);
         todoItem.appendChild(doneBtn);
+        saveData()
 
         doneBtn.addEventListener("click", () => {
             heading.classList.toggle('line-through')
+            saveData()
         })
     
         userInput.value = "";
     }
+    console.log(todoList)
 })
+
+function saveData(){
+    localStorage.setItem("data", todoList.innerHTML )
+}
+
+function showData(){
+    todoList.innerHTML = localStorage.getItem("data")
+}
+
+showData()
